@@ -118,7 +118,7 @@ angular
       .state('workerprof', {
         url: '/workerprof',
         controller: 'AuthCtrl as authCtrl',
-        templateUrl: 'admin/admin-workerprof.html',
+        templateUrl: 'admin/workers-list.html',
         // resolve: {
         //   auth: function($state, Users, Auth){
         //     return Auth.$requireAuth().catch(function(){
@@ -143,7 +143,7 @@ angular
       .state('add-workers', {
         url: '/add-workers',
         controller: 'AuthCtrl as authCtrl',
-        templateUrl: 'admin/admin-workerprof-add.html',
+        templateUrl: 'admin/worker-add.html',
         // resolve: {
         //   auth: function($state, Users, Auth){
         //     return Auth.$requireAuth().catch(function(){
@@ -196,7 +196,7 @@ angular
       .state('offices', {
         url: '/offices',
         controller: 'searchController',
-        templateUrl: 'admin/admin-offices.html',
+        templateUrl: 'admin/offices-list.html',
         // resolve: {
         //   auth: function($state, Users, Auth){
         //     return Auth.$requireAuth().catch(function(){
@@ -222,7 +222,7 @@ angular
       .state('add-offices', {
         url: '/add-offices',
         controller: 'AuthCtrl as authCtrl',
-        templateUrl: 'admin/admin-offices-add.html',
+        templateUrl: 'admin/office-add.html',
         // resolve: {
         //   requireNoAuth: function($state, Auth){
         //     return Auth.$requireAuth().then(function(auth){
@@ -278,7 +278,7 @@ angular
 
       .state('admin-profile', {
         url: '/admin-profile',
-        controller: 'ProfileCtrl as profileCtrl',
+        // controller: 'ProfileCtrl as profileCtrl',
         templateUrl: 'admin/admin-profile.html',
         // resolve: {
         //   auth: function($state, Users, Auth){
@@ -304,8 +304,8 @@ angular
       
       .state('admin-add', {
         url: '/admin-add',
-        controller: 'AuthCtrl as authCtrl',
-        templateUrl: 'admin/admin-add.html',
+        // controller: 'AuthCtrl as authCtrl',
+        templateUrl: 'admin/add-admins.html',
         // resolve: {
         //   auth: function($state, Users, Auth){
         //     return Auth.$requireAuth().catch(function(){
@@ -329,7 +329,7 @@ angular
       })
       .state('admin-list', {
         url: '/admin-list',
-        controller: 'AdminCtrl as adminCtrl',
+        // controller: 'AdminCtrl as adminCtrl',
         templateUrl: 'admin/admin-list.html',
         // resolve: {
         //   auth: function($state, Users, Auth){

@@ -24,7 +24,7 @@
                         </div>                                                                        
                     </li>                                                                     
                     <li>
-                        <a ui-sref="home"><span class="fa fa-home"></span>Landing Page</a>
+                        <a ui-sref="home"><span class="fa fa-home"></span>Landing Page</span></a>
                     </li>   
                     <li>
                         <a ui-sref="admin-list"><span class="fa fa-eye"></span>Edit Admins</a>
@@ -34,10 +34,10 @@
                     </li>
                     <li>
                         <a ui-sref="offices"><span class="fa fa-university "></span>Edit Kantor</a>
-                    </li>    
+                    </li>   
                     <li>
                         <a href="" ng-click="dashboardCtrl.logout()"><span class="fa fa-sign-out"></span>Log Out</a>
-                    </li>               
+                    </li>                                   
                 </ul>
                 <!-- END X-NAVIGATION -->
             </div>
@@ -59,21 +59,61 @@
                 <!-- PAGE CONTENT WRAPPER BEGIN UI-ROUTE -->
                 <div class="page-content-wrap">
                     <div class="panel panel-default">
-
                         <div class="panel-heading">
-                            <h3 class="panel-title">WELCOME</h3>
+                            <h3 class="panel-title">Add Admins</h3>
                         </div>
                         <div class="panel-body">
                             <div class="container">
                                 <div class="row">
-                                    Hello, Admin Dan.
+                                    <div class="container">
+                                        <!-- START ADMIN DETAILS -->
+                                        <div class="row">
+                                            <form class="form-horizontal col-lg-5 col-sm-offset-1">
+                                                <div class="alert alert-danger" ng-show="authCtrl.IsMatch">
+                                                    <span>Passwords have to match!</span>
+                                                </div>
+                                                <div class="alert alert-danger" ng-show="authCtrl.error">
+                                                    <span>{{ authCtrl.error.message }}</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="user-name" class="col-lg-3 control-label">Email</label>
+                                                    <div class="col-lg-8">
+                                                        <input type="text" class="form-control" id="user-name" placeholder="Masukkan Email" ng-model="authCtrl.user.email">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="user-email" class="col-lg-3 control-label">Password</label>
+                                                    <div class="col-lg-8">
+                                                        <input type="password" class="form-control" id="user-name" placeholder="Masukkan Password" ng-model="authCtrl.user.password">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="user-email" class="col-lg-3 control-label">Ulang Password</label>
+                                                    <div class="col-lg-8">
+                                                        <input type="password" class="form-control" id="user-name" placeholder="Ulang Password" ng-model="authCtrl.passVal">
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                        <br>
+                                        <!-- END ADMIN DETAILS -->
+
+                                        <div class="col-lg-6 col-lg-offset-2">
+                                            <button type="submit" class="btn btn-primary" ng-click="authCtrl.register()">Save</button>
+                                            <button type="submit" class="btn btn-primary" ui-sref = "admin-list">Cancel</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>  
+                    
                 </div>
                 <!-- END PAGE CONTENT WRAPPER -->                
             </div>            
             <!-- END PAGE CONTENT -->
         </div>
         <!-- END PAGE CONTAINER -->
+
+      
