@@ -34,7 +34,10 @@
                     </li>
                     <li>
                         <a ui-sref="offices"><span class="fa fa-university "></span> Edit Kantor</a>
-                    </li>                                     
+                    </li>   
+                    <li>
+                        <a href="" ng-click="dashboardCtrl.logout()"><span class="fa fa-sign-out"></span> Log Out</a>
+                    </li>                                   
                 </ul>
                 <!-- END X-NAVIGATION -->
             </div>
@@ -50,20 +53,12 @@
                         <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
                     </li>
                     <!-- END TOGGLE NAVIGATION -->   
-                    <!-- POWER OFF -->
-                    <li class="xn-icon-button pull-right last">
-                        <a href="#"><span class="fa fa-power-off"></span></a>
-                        <ul class="xn-drop-left animated zoomIn">
-                            <li><a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Sign Out</a></li>
-                        </ul>                        
-                    </li> 
-                    <!-- END POWER OFF -->                  
                 </ul>
                 <!-- END X-NAVIGATION VERTICAL -->                     
                 
                 <!-- PAGE CONTENT WRAPPER BEGIN UI-ROUTE -->
                 <div class="page-content-wrap">
-                    <ui-view></ui-view>
+                    
                     
                     <script>
                         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -83,22 +78,4 @@
         </div>
         <!-- END PAGE CONTAINER -->
 
-        <!-- MESSAGE BOX-->
-        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
-            <div class="mb-container">
-                <div class="mb-middle">
-                    <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
-                    <div class="mb-content">
-                        <p>Are you sure you want to log out?</p>                    
-                        <p>Press No if you want to continue working. Press Yes to logout current user.</p>
-                    </div>
-                    <div class="mb-footer">
-                        <div class="pull-right">
-                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
-                            <button class="btn btn-default btn-lg mb-control-close">No</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END MESSAGE BOX-->
+      
