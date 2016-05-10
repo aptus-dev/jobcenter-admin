@@ -20,8 +20,7 @@ angular
     // Front page UI Routes
       .state('home', {
         url: '/',
-        controller: 'HomeCtrl as homeCtrl',
-        templateUrl: 'views/home.html'
+        templateUrl: 'dashboard/admin-landing.html'
       })
       .state('contact-us', {
         url: '/contact-us',
