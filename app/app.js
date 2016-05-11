@@ -18,24 +18,24 @@ angular
     $stateProvider
     
     // Front page UI Routes
-      .state('home', {
-        url: '/',
-        templateUrl: 'dashboard/admin-landing.html'
-      })
-      .state('contact-us', {
-        url: '/contact-us',
-        templateUrl: 'views/contact-us.html'
-      })
-      .state('search', {
-        url: '/search',
-        templateUrl: 'search/search.html',
-        controller: 'searchController'
-      })
-      .state('profiles', {
-        url: '/profiles/:workerId',
-        controller: 'profileViewController',
-        templateUrl: 'profiles/workerprofile.html'
-      })
+      // .state('home', {
+      //   url: '/',
+      //   templateUrl: 'dashboard/admin-landing.html'
+      // })
+      // .state('contact-us', {
+      //   url: '/contact-us',
+      //   templateUrl: 'views/contact-us.html'
+      // })
+      // .state('search', {
+      //   url: '/search',
+      //   templateUrl: 'search/search.html',
+      //   controller: 'searchController'
+      // })
+      // .state('profiles', {
+      //   url: '/profiles/:workerId',
+      //   controller: 'profileViewController',
+      //   templateUrl: 'profiles/workerprofile.html'
+      // })
     // END Front page UI Routes  
     
     
@@ -118,7 +118,7 @@ angular
       .state('workerprof', {
         url: '/workerprof',
         controller: 'AuthCtrl as authCtrl',
-        templateUrl: 'admin/workers-list.html',
+        templateUrl: 'worker/workers-list.html',
         // resolve: {
         //   auth: function($state, Users, Auth){
         //     return Auth.$requireAuth().catch(function(){
@@ -143,7 +143,7 @@ angular
       .state('add-workers', {
         url: '/add-workers',
         controller: 'AuthCtrl as authCtrl',
-        templateUrl: 'admin/worker-add.html',
+        templateUrl: 'worker/worker-add.html',
         // resolve: {
         //   auth: function($state, Users, Auth){
         //     return Auth.$requireAuth().catch(function(){
@@ -168,7 +168,7 @@ angular
       .state('worker-edit', {
         url: '/worker-edit/:workerId',
         controller: 'searchController',
-        templateUrl: 'admin/worker-edit.html',
+        templateUrl: 'worker/worker-edit.html',
         // resolve: {
         //   auth: function($state, Users, Auth){
         //     return Auth.$requireAuth().catch(function(){
@@ -196,7 +196,7 @@ angular
       .state('offices', {
         url: '/offices',
         controller: 'searchController',
-        templateUrl: 'admin/offices-list.html',
+        templateUrl: 'office/offices-list.html',
         // resolve: {
         //   auth: function($state, Users, Auth){
         //     return Auth.$requireAuth().catch(function(){
@@ -222,7 +222,7 @@ angular
       .state('add-offices', {
         url: '/add-offices',
         controller: 'AuthCtrl as authCtrl',
-        templateUrl: 'admin/office-add.html',
+        templateUrl: 'office/office-add.html',
         // resolve: {
         //   requireNoAuth: function($state, Auth){
         //     return Auth.$requireAuth().then(function(auth){
@@ -250,7 +250,7 @@ angular
       .state('branch-edit', {
         url: '/branch-edit/:branchId',
         controller: 'searchController',
-        templateUrl: 'admin/branch-edit.html',
+        templateUrl: 'office/branch-edit.html',
         // resolve: {
         //   auth: function($state, Users, Auth){
         //     return Auth.$requireAuth().catch(function(){
